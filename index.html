@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Alympics: LLM Agents Meet Game Theory">
+  <meta name="keywords" content="Alympics, LLM, Game Theory">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alympics: LLM Agents Meet Game Theory</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/image-compare-viewer.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/citygs-icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/image-compare-viewer.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Alympics: LLM Agents Meet Game Theory</h1>
+          <h1 style="font-size:1.5rem"> <i>COLING 2025</i></h1>
+          <div class="is-size-5.5 publication-authors">
+            <span class="author-block">
+              Shaoguang Mao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Yuzhe Cai</a><sup>2,3</sup>,</span>
+            <span class="author-block">
+              Yan Xia</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Wenshan Wu</a><sup>1</sup>,
+            </span>
+            <!-- <br> -->
+            <span class="author-block">
+              Xun Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Fengyi Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Qiang Guan</a><sup>2,3</sup>
+            </span>
+            <span class="author-block">
+              Tao Ge</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+                Furu Wei</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5.5 publication-authors">
+            <span class="author-block"><sup>1</sup>Microsoft Research Asia</span><br>
+            <span class="author-block"><sup>2</sup>Institute of Automation, Chinese Academy of Sciences</span><br>
+            <span class="author-block"><sup>3</sup>University of Chinese Academy of Sciences
+            
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.03220"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/microsoft/Alympics"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-matrixcity">
+          <video poster="" id="matrixcity" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/matrixcity.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-building">
+          <video poster="" id="building" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/building.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-rubble">
+          <video poster="" id="rubble" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rubble.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-residence">
+          <video poster="" id="residence" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/residence.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-sciart">
+          <video poster="" id="sciart" autoplay controls muted loop playsinline height="95%">
+            <source src="./static/videos/sciart.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Game theory is a branch of mathematics that studies strategic interactions among rational agents. 
+            We propose <strong>Alympics</strong> (Olympics for Agents), a systematic framework utilizing Large Language Model (LLM) 
+            agents for empirical game theory research. <strong>Alympics</strong> creates a versatile platform for studying complex 
+            game theory problems, bridging the gap between theoretical game theory and empirical investigations by providing a 
+            controlled environment for simulating human-like strategic interactions with LLM agents. In our pilot case study, 
+            the ''Water Allocation Challenge'', we explore <strong>Alympics</strong> through a challenging strategic game focused 
+            on the multi-round auction of scarce survival resources. This study demonstrates the framework's ability 
+            to qualitatively and quantitatively analyze game determinants, strategies, and outcomes. Additionally,
+             we conduct a comprehensive human assessment and an in-depth evaluation of LLM agents in rational strategic 
+             decision-making scenarios. Our findings highlight LLM agents' potential to advance game theory knowledge 
+             and expand the understanding of their proficiency in emulating human strategic behavior.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Architecture of Alympics</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/gameground.jpg" alt="美丽的风景" title="点击图片了解更多">
+            <p>
+                The architecture of Alympics comprises the Sandbox Playground and Players. The Sandbox Playground creates an environment where game settings, as specified by researchers, are executed. Agent players, along with the optional human players, actively engage in the game within this environment.
+                <ul>
+                    <li>Sandbox Playground: The Sandbox Playground serves as the environment for conducting games, providing a versatile and controlled space for agent players interactions.</li>
+                    <li>Agent Players: Agent Players constitute an indispensable component of the Alympics framework, embodying LLM-powered agent entities that participate in strategic interactions within the Sandbox Playground.</li>
+                  </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Contributions</h2>
+          <div class="content has-text-justified">
+            <p>
+                <ul>
+                    <li>The proposal of an original, LLM agent-based framework to facilitate game theory research.</li>
+                    <li>The demonstration of Alympics’s application through a comprehensive pilot case study.</li>
+                    <li>The emphasis on the significance of leveraging LLM agents to scrutinize strategic decision-making within a controlled and reproducible environment. This endeavor not only enriches the field of game theory but also has the potential to inspire research in other domains where decision-making assumes a pivotal role.</li>
+                  </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+    </div>
+  </section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{mao2023alympics,
+        title={ALYMPICS: Language Agents Meet Game Theory}, 
+        author={Shaoguang Mao and Yuzhe Cai and Yan Xia and Wenshan Wu and Xun Wang and Fengyi Wang and Tao Ge and Furu Wei},
+        year={2023},
+        eprint={2311.03220},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="http://www-sop.inria.fr/reves/Basilic/2021/KPLD21/">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#top" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website. There are also many thanks to Jiemin Fang for insightful discussions during the preparation of the draft.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let imageCompareViewers = document.querySelectorAll(".image-compare");
+  let configs = [
+  { 
+    addCircle: true, 
+    verticalMode: false, 
+    hoverStart: true,
+    showLabels: true,
+    labelOptions: {
+      before: 'MegaNeRF [Turki 2022]',  
+      after: 'Ours',
+      onHover: false
+    },
+  },
+  { 
+    addCircle: true, 
+    verticalMode: false, 
+    hoverStart: true,
+    showLabels: true,
+    labelOptions: {
+      before: 'SwitchNeRF [Zhenxing 2022]',  
+      after: 'Ours',
+      onHover: false
+    },
+  },
+  { 
+    addCircle: true, 
+    verticalMode: false, 
+    hoverStart: true,
+    showLabels: true,
+    labelOptions: {
+      before: '3DGS [Bernhard 2023]',  
+      after: 'Ours',
+      onHover: false
+    },
+  },
+  { 
+    addCircle: true, 
+    verticalMode: false, 
+    hoverStart: true,
+    showLabels: true,
+    labelOptions: {
+      before: 'GPNeRF [Yuqi 2023]',  
+      after: 'Ours',
+      onHover: false
+    },
+  },
+  { 
+    addCircle: true, 
+    verticalMode: false, 
+    hoverStart: true,
+    showLabels: true,
+    labelOptions: {
+      before: 'GPNeRF [Yuqi 2023]',  
+      after: 'Ours',
+      onHover: false
+    },
+  },
+  { 
+    addCircle: true, 
+    verticalMode: false, 
+    hoverStart: true,
+    showLabels: true,
+    labelOptions: {
+      before: '3DGS [Bernhard 2023]',  
+      after: 'Ours',
+      onHover: false
+    },
+  }
+  ];
+  
+  imageCompareViewers.forEach((element, i) => {
+      new ImageCompare(element, configs[i]).mount();
+    });
+</script>
+
+</body>
+</html>
